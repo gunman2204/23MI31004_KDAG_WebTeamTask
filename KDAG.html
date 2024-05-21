@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDAG@iitkgp Task</title>
+</head>
+
+<body>
+    <style>
+        * {
+            background-color: black;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        
+
+        nav {
+            background-color: rgb(243, 196, 196);
+        }
+
+        .first {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            position:sticky;
+        }
+
+        nav ul {
+            display: inline;
+            /* /* margin:auto; */
+            border: 2px solid black;
+            margin: 15px 2px;
+            padding: 2px;
+            position: sticky;
+        }
+
+        nav ul li {
+            margin: 2px;
+            padding: 4px;
+            display: inline-block;
+
+        }
+
+        nav ul li:hover {
+            text-decoration-line: underline;
+
+        }
+
+        nav ul li:hover ul {
+            display: block;
+            /* background-color: white; */
+        }
+
+        nav ul li ul {
+            position: absolute;
+            width: 210px;
+            display: none;
+            border-top: 4px solid red;
+        }
+
+        nav ul li ul li {
+            /* background-color: red; */
+            display: block;
+            font-size: medium;
+            padding: 4px;
+            margin: 4px;
+            /* color:red; */
+        }
+
+        nav ul li ul li a {
+            display: block !important;
+        }
+
+        nav ul li ul li:hover {
+            background: #ef9b9b;
+        }
+
+        .one {
+            margin-top: 4px;
+            ;
+        }
+
+        .two {
+            color: white;
+        }
+
+        a:any-link {
+            text-decoration-line: none;
+            color: white;
+
+        }
+
+        nav a {
+            list-style-type: none;
+            font-size: medium;
+        }
+
+        nav a:hover {
+            color: red;
+        }
+
+        .second {
+            display: flex;
+            justify-content: space-between;
+            margin: 2px;
+            padding: 2px;
+            /* border: 2px solid rgb(238, 174, 174); */
+        }
+
+        .container {
+            display: flex;
+            /* flex-wrap: wrap; */
+        }
+
+        .box1 {
+            margin: 5px;
+            padding: 2px;
+            width: 20%;
+            /* border: 2px solid white; */
+            /* transition-property: all;
+            transition-duration: 0.8s; */
+            scroll-behavior: smooth;
+        }
+
+        .sidelink {
+            transition-property: all;
+            transition-duration: 0.8s;
+        }
+
+        a.sidelink:hover {
+            /* transform: scale(1.2); */
+            text-decoration: underline;
+            color: red;
+            transform: scale(1.4);
+        }
+         /* a.sidelist:active{
+            transition: 0.5s ease-in-out;
+            color:red;
+        }
+        a.sidelink:focus{
+            transition: 0.5s ease-in-out;
+            color:red;
+        } */
+
+
+        .box2 {
+            width: 70%;
+            padding: 10px;
+            margin: 5px;
+            border: 2px solid rgb(238, 174, 174);
+            color: white;
+            text-align: justify;
+            font-size: 20px;
+        }
+
+
+        .box3 {
+            margin: 5px;
+            width: 10%;
+            padding: 2px;
+            border: 2px solid black;
+        }
+
+        main li {
+            list-style-type: none;
+            margin: 5px;
+            padding: 10px 5px;
+            font-weight: 520;
+            font-size: 17px;
+            box-decoration-break: slice;
+            border-bottom: 2px solid rgb(238, 174, 174);
+            margin-bottom: 8px;
+        }
+
+        main div li strong {
+            color: red;
+            font-size: 22px;
+        }
+        .list {
+            display:none;
+            max-height: 0;
+            overflow:hidden;
+            transition: max-height 0.8s ease-out ;
+            
+        }
+        .visible {
+            max-height: 200px; /* Adjust based on your content's height */
+            transition: max-height 0.8s ease-in;
+        }
+        @media screen and (max-width:650px){
+            
+            .box1{
+                display:none;
+            }
+            .box2{
+                display:block;
+                width:max-content;
+                position:relative;
+
+            }
+            .box3 {
+                display:none;
+            }
+
+        }
+
+        
+    </style>
+    <script>
+        
+        function togglelist(li) {
+            const lis= document.getElementById(li);
+            // var list2 = document.getElementById("list2")
+            
+            if (lis.classList.contains('list')) {
+                lis.classList.remove('list');
+                lis.classsList.add('visible');
+            }
+            
+            else {
+                lis.classList.add('list');
+                lis.classList.remove('visible');
+            }
+        
+        }
+       
+        
+        
+    </script>
+    <nav>
+        <div class="first">
+            <ul class="one">
+                <li> <a href="vS code">Courses <img src="Down-Arrow.png" height="20px" width="15px"
+                            style="display:inline;"></a>
+                    <ul>
+                        <li><a href="vSCode">DSA to development</a></li>
+                        <li><a href="vSCode">For Working Professionals</a></li>
+                        <li><a href="vSCode">For School students</a></li>
+                        <li><a href="vSCode">All Courses</a></li>
+                    </ul>
+                </li>
+                <li> <a href="vS code">Tutorials <img src="Down-Arrow.png" height="20px" width="15px"></a>
+                    <ul>
+                        <li><a href="vSCode">Python Tutorial</a></li>
+                        <li><a href="vSCode">Web Development in Python </a></li>
+                        <li><a href="vSCode">Data Structure & Algorithm</a></li>
+                        <li><a href="vSCode">System Design</a></li>
+                    </ul>
+                </li>
+                <li> <a href="vS code">Practices <img src="Down-Arrow.png" height="20px" width="15px">
+                        <ul>
+                            <li><a href="vSCode">All DSA Problems</a></li>
+                            <li><a href="vSCode">Problem of The Day </a></li>
+                            <li><a href="vSCode">GFG SDE Sheet</a></li>
+                            <li><a href="vSCode">Curated DSA Lists</a></li>
+                        </ul>
+                    </a></li>
+                <li> <a href="vS code">Data Science <img src="Down-Arrow.png" height="20px" width="15px"></a>
+                    <ul>
+                        <li class="thinbar"></li>
+                        <li><a href="vSCode">Python Tutorial</a></li>
+                        <li><a href="vSCode">R Tutorial </a></li>
+                        <li><a href="vSCode">Machine Learning</a></li>
+                        <li><a href="vSCode">Data Science using Python</a></li>
+                    </ul>
+                </li>
+                <li> <a href="vS code">Contents <img src="Down-Arrow.png" height="20px" width="15px"></a></li>
+            </ul>
+
+            <img id="icon" src="KDAG.png" alt="KDAG image" height="40px" width="200px"
+                style="display:block; margin-left:10px; margin-right:320px; margin-top: 10px;">
+            <ul class="two">
+                <img src="OIP.jpeg" alt="search image" height="20px" width="20px"
+                    style="display:inline; margin-right: 10px;">
+                <img src="darkmode4.jpeg" alt="darkmodesymbol" height="20px" width="20px" style="display:inline; margin-right:20px;">
+                <img src="translate2.jpeg" alt="translate image" width="20px" height="20px">
+            </ul>
+        </div >
+        <div class="second">
+
+            <a href="vS code">Python for MachineLearning</a>
+            <a href="vS code">Machine Learning with R</a>
+            <a href="vS code">Machine Learning Algorithms</a>
+            <a href="vS code">EDA</a>
+            <a href="vS code">Maths for MachineLearning</a>
+            <a href="vS code">Machine Learning Interview Questions</a>
+            <a href="vS code">ML Projects</a>
+            <a href="vS code">Deep Learning</a>
+            <a href="vS code">NLP</a>
+            <a href="vS code">Computer Vision</a>
+        </div>
+    </nav>
+    <main class="container">
+        <div class="box1">
+            <li><strong>Machine Learning Tutorial</strong></li><br>
+            <li class="sidelist"><a href="#" class="sidelink" onclick="togglelist('list1')">Week:1 Getting Started With machine Learning</a>
+                <ul id="list1" class="list visible" >
+                    <li><a href="#">Lectures</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Assignment</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </li>
+            <li class="sidelist"><a href="#" class="sidelink" onclick="togglelist('list2')">Week:2 Machine Learning
+                    Mathematics</a>
+                <ul id="list2" class="list visible">
+                    <li><a href="#">Lectures</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Assignment</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </li>
+            <li class="sidelist"><a href="#" class="sidelink" onclick="togglelist('list3')">Week:3 Data Processing</a>
+                <ul id="list3" class="list visible">
+                    <li><a href="#">Lectures</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Assignment</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="sidelink" onclick="togglelist('list4')">Week:4 Classification and Regression</a>
+                <ul id="list4" class="list visible">
+                    <li><a href="#">Lectures</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Assignment</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </li>
+            <li class="sidelist"><a href="#" class="sidelink" onclick="togglelist('list5')">Week:5 K Nearest Neighbours</a>
+                <ul id="list5" class="list visible">
+                    <li><a href="#">Lectures</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Assignment</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </li>
+            <li class="sidelist"><a href="#" class="sidelink" onclick="togglelist('list6')">Week:6 Support Vector Machines</a>
+                <ul id="list6" class="list visible">
+                    <li><a href="#">Lectures</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Assignment</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </li>
+            <li class="sidelist"><a href="#" class="sidelink" onclick="togglelist('list7')">Week:7 Decision Tree</a>
+                <ul id="list7" class="list">
+                    <li><a href="#">Lectures</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Assignment</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </li>
+            <li class="sidelist"><a href="#" class="sidelink" onclick="togglelist('list8')">Week:8 Ensemble Learning</a>
+                <ul id="list8" class="list visible">
+                    <li><a href="#">Lectures</a></li>
+                    <li><a href="#">Modules</a></li>
+                    <li><a href="#">Assignment</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </li>
+            <li class="sidelist"><a href="#" class="sidelink" onclick="togglelist('list1')">Week:9 Generative Model</a></li>
+            <li class="sidelist"><a href="#" class="sidelink" onclick="togglelist('list1')">Week:10 Time Series Forecasting</a></li>
+            <li class="sidelist"><a href="#" class="sidelink" onclick="togglelist('list1')">Week:9 Clustering Algorithm</a></li>
+            <li class="sidelist"><a href="#" class="sidelink" onclick="togglelist('list1')">Week:9 Recurrent Neural Networks</a></li>
+            <li class="sidelist"><a href="#" class="sidelink" onclick="togglelist('list1')">Week:9 Reinforcement Learning</a></li>
+            <li class="sidelist"><a href="#" class="sidelink" onclick="togglelist('list1')">Week:9 Deep Learning Tutorial</a></li>
+        </div>
+        <div class="box2">
+            <h2> Machine Learning Tutorial</h2>
+            <img src="ML-Tutorial.jpg" width="60%" style="display:block; margin-left: auto;margin-right: auto;">
+            <p>Machine Learning tutorial covers basic and advanced concepts, specially designed to cater to both
+                students and experienced working professionals.
+
+                This machine learning tutorial helps you gain a solid introduction to the fundamentals of machine
+                learning and explore a wide range of techniques, including supervised, unsupervised, and reinforcement
+                learning.</p>
+        </div>
+        <div class="box3">
+            <li><a href="vS Code">Finance</a></li>
+            <li><a href="vS Code">Business</a></li>
+            <li><a href="vS Code">Quants</a></li>
+            <li><a href="vS Code">Engineering</a></li>
+            <li><a href="vS Code">Medical</a></li>
+        </div>
+    </main>
+</body>
+
+</html>
